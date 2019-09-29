@@ -111,7 +111,7 @@ Oracle对WithdrawTRC20事件的处理和其他的事件处理类似， 首先是
 ```
 SideChainGatewayApi.withdrawTRC20Transaction函数会对赎回操作的的数据进行签名，把签名后的结果传递给SideChainGateWay合约的multiSignForWithdrawTRC20方法进行验签。
 
-```
+```java
 SideChainGatewayApi.withdrawTRC20Transaction方法
 //对赎回数据的签名，并调用SideChainGateway进行验签
   //1.对赎回数据的签名
@@ -281,7 +281,7 @@ SideChainGateWay合约的getWithdrawOracleSigns方法:
 ```
 
 MainChainGatewayApi.multiSignForWithdrawTRC20Transaction方法：
-```
+```java
 public static Transaction multiSignForWithdrawTRC20Transaction(String from,
       String mainChainAddress, String value, String nonce, SignListParam signParam)
       throws RpcConnectException {
